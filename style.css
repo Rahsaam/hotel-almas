@@ -41,6 +41,7 @@ button {
     background-color: #fff;
     position: fixed;
     width: 100%;
+    z-index: 3;
 }
 .container {
     max-width: 1300px;
@@ -75,6 +76,30 @@ button {
 .right-top > li:first-child {
     border: 0;
 }
+.right-top-sub-menu {
+    display: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #e3e3e3;
+    padding: 5px;
+    position: absolute;
+    border: 0.2px solid #656565;
+}
+.right-top-sub-items {
+    border-bottom: 0.5px solid #afafaf;
+    padding: 2px 0;
+    width: 100%;
+}
+.right-top-sub-items:hover {
+    color: #fff;
+}
+.right-top-sub-items:nth-of-type(3) {
+    border-bottom: 0;
+}
+.right-top-items:hover .right-top-sub-menu {
+    display: block !important;
+}
 .left-top {
     display: flex;
     margin-right: auto;
@@ -99,6 +124,13 @@ button {
     font-size: 14px;
 }
 /**? main images */
+.current-position {
+    margin-top: 70px;
+    color: #474747;
+}
+.current-position i {
+    padding: 0px 10px;
+}
 main {
     padding-top: 50px;
 }
@@ -125,10 +157,20 @@ main {
     align-content: center;
     gap: 5px;
     width: 100%;
+    position: relative;
 }
 .grid-images > img {
     width: 100%;
     border-radius: 5px;
+}
+.other-imgs {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    padding: 5px;
+}
+.other-imgs i {
+    margin: 0 5px;
 }
 /**? hotel name */
 .hotel-desc {
@@ -559,8 +601,13 @@ footer {
         margin: 0 auto;
         overflow: hidden;
     }
+    .other-imgs {
+        display: none;
+    }
     .navbar-top .left-top {
-        font-size: 10px;
+        font-size: 9px;
+        text-align: left;
+        white-space: nowrap;
     }
     .navbar-bottom ul {
         padding: 0;
@@ -595,14 +642,44 @@ footer {
     .card-body-main {
         font-size: 12px;
     }
+    .section-4 article {
+        flex-direction: column;
+        text-align: center;
+    }
+    .right-box-sec4 {
+        margin: 0 auto;
+        text-align: right;
+    }
+    .card-header {
+        text-align: center;
+    }
+    .card-body {
+        margin-bottom: 0;
+    }
+    .card-body-top {
+        text-align: center;
+    }
+    .card-body-top i {
+        display: none;
+    }
     .left-box-sec4 {
         padding: 0 5px;
     }
     .left-box-sec4 {
         font-size: 12px;
     }
+    .user-comments-sec3 {
+        font-size: 5px;
+    }
+    .left-box-sec4 small {
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
     .left-box-sec4 button {
-        margin-bottom: 15px;
+        margin: 15px 0;
+        display: inline-block;
+        width: 30%;
+        margin: 0 auto;
     }
      .hotel-desc button {
        display: none;
